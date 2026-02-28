@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Sparkle Clean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-dark);
+        }
+
+        .login-box {
+            background: var(--bg-panel);
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            background: #fafafa;
+            color: var(--text-main);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary-green);
+        }
+
+        .login-btn {
+            width: 100%;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: var(--primary-pink);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <h2><span class="pink">Admin</span> <span class="green">Portal</span></h2>
+            <form id="loginForm" onsubmit="event.preventDefault(); window.location.href='admin-dashboard.html';">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Enter simple dummy username" value="admin" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" value="password" required>
+                </div>
+                <!-- Submit defaults to redirect via JS for preview -->
+                <button type="submit" class="btn btn-primary login-btn">Login</button>
+            </form>
+            <a href="index.html" class="back-link">← Back to Main Site</a>
+        </div>
+    </div>
+</body>
+
+</html>
