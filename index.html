@@ -65,24 +65,70 @@
         <h2 class="section-title">Our <span class="green-text">Services</span></h2>
         <div class="services-grid">
             <div class="service-card" style="--delay: 0.1s">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=800"
+                        alt="Dry Cleaning">
+                </div>
                 <div class="icon-wrap">🫧</div>
-                <h3>Dry Cleaning</h3>
-                <p>Expert care for your delicate suits, dresses, and traditional wear using eco-safe solvents.</p>
+                <div class="service-card-content">
+                    <h3>Dry Cleaning</h3>
+                    <p>Expert care for your delicate suits, dresses, and traditional wear using eco-safe solvents.</p>
+                </div>
             </div>
             <div class="service-card" style="--delay: 0.2s">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&q=80&w=800"
+                        alt="Wash & Fold">
+                </div>
                 <div class="icon-wrap">👕</div>
-                <h3>Wash & Fold</h3>
-                <p>Everyday laundry, perfectly washed, dried, and crisply folded for your convenience.</p>
+                <div class="service-card-content">
+                    <h3>Wash & Fold</h3>
+                    <p>Everyday laundry, perfectly washed, dried, and crisply folded for your convenience.</p>
+                </div>
             </div>
             <div class="service-card" style="--delay: 0.3s">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&q=80&w=800"
+                        alt="Steam Ironing">
+                </div>
                 <div class="icon-wrap">👔</div>
-                <h3>Steam Ironing</h3>
-                <p>Professional pressing that removes every wrinkle, leaving garments sleek and sharp.</p>
+                <div class="service-card-content">
+                    <h3>Steam Ironing</h3>
+                    <p>Professional pressing that removes every wrinkle, leaving garments sleek and sharp.</p>
+                </div>
             </div>
             <div class="service-card" style="--delay: 0.4s">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1552330892-74c74161c94d?auto=format&fit=crop&q=80&w=800"
+                        alt="Alterations">
+                </div>
                 <div class="icon-wrap">✂️</div>
-                <h3>Alterations</h3>
-                <p>Master tailors available to adjust, hem, and repair your favorite outfits to perfection.</p>
+                <div class="service-card-content">
+                    <h3>Alterations</h3>
+                    <p>Master tailors available to adjust, hem, and repair your favorite outfits to perfection.</p>
+                </div>
+            </div>
+            <div class="service-card" style="--delay: 0.5s">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800"
+                        alt="Stain Removal">
+                </div>
+                <div class="icon-wrap">✨</div>
+                <div class="service-card-content">
+                    <h3>Premium Stain Removal</h3>
+                    <p>Advanced treatment for tough stains on all types of fabrics. We make them disappear.</p>
+                </div>
+            </div>
+            <div class="service-card" style="--delay: 0.6s">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1598111234392-4876ce68bffd?auto=format&fit=crop&q=80&w=800"
+                        alt="Leather Care">
+                </div>
+                <div class="icon-wrap">👞</div>
+                <div class="service-card-content">
+                    <h3>Leather & Suede Care</h3>
+                    <p>Specialized cleaning and conditioning for your luxury leather jackets, bags, and shoes.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -92,7 +138,8 @@
             <div class="delivery-icon"><i class="fas fa-truck-fast"></i></div>
             <div class="delivery-text">
                 <h2>Free <span class="pink">Home Delivery</span></h2>
-                <p>Busy schedule? We've got you covered. Enjoy our fast, reliable, and entirely free pickup and delivery service across Lahore.</p>
+                <p>Busy schedule? We've got you covered. Enjoy our fast, reliable, and entirely free pickup and delivery
+                    service across Lahore.</p>
             </div>
             <a href="#contact" class="btn btn-primary">Book a Pickup</a>
         </div>
@@ -152,8 +199,9 @@
     <section id="order-slip" class="order-slip-section">
         <div class="slip-container">
             <h2 class="section-title">Generate <span class="green-text">Order Slip</span></h2>
-            <p class="subtitle" style="text-align: center;">Quickly create a professional order slip for your customers.</p>
-            
+            <p class="subtitle" style="text-align: center;">Quickly create a professional order slip for your customers.
+            </p>
+
             <form id="slipForm" class="slip-form">
                 <div class="form-row">
                     <div class="form-group">
@@ -165,27 +213,48 @@
                         <input type="tel" id="customerPhone" required placeholder="03XXXXXXXXX">
                     </div>
                     <div class="form-group">
-                        <label>Date</label>
+                        <label>Order Date</label>
                         <input type="date" id="orderDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Return Date</label>
+                        <input type="date" id="returnDate" required>
                     </div>
                 </div>
 
                 <h3 class="slip-items-title">Select Items</h3>
                 <div class="items-grid">
-                    <div class="item-input"><label>Shirt</label><input type="number" min="0" data-item="Shirt" placeholder="Qty"></div>
-                    <div class="item-input"><label>Pant</label><input type="number" min="0" data-item="Pant" placeholder="Qty"></div>
-                    <div class="item-input"><label>Shalwar Kameez</label><input type="number" min="0" data-item="Shalwar Kameez" placeholder="Qty"></div>
-                    <div class="item-input"><label>Waistcoat</label><input type="number" min="0" data-item="Waistcoat" placeholder="Qty"></div>
-                    <div class="item-input"><label>Blanket</label><input type="number" min="0" data-item="Blanket" placeholder="Qty"></div>
-                    <div class="item-input"><label>Curtain</label><input type="number" min="0" data-item="Curtain" placeholder="Qty"></div>
-                    <div class="item-input"><label>Carpet / Rug</label><input type="number" min="0" data-item="Carpet / Rug" placeholder="Qty"></div>
-                    <div class="item-input"><label>Bed Sheet</label><input type="number" min="0" data-item="Bed Sheet" placeholder="Qty"></div>
-                    <div class="item-input"><label>Towel</label><input type="number" min="0" data-item="Towel" placeholder="Qty"></div>
-                    <div class="item-input"><label>Tie</label><input type="number" min="0" data-item="Tie" placeholder="Qty"></div>
-                    <div class="item-input"><label>Coat / Jacket</label><input type="number" min="0" data-item="Coat / Jacket" placeholder="Qty"></div>
-                    <div class="item-input"><label>Sweater</label><input type="number" min="0" data-item="Sweater" placeholder="Qty"></div>
-                    <div class="item-input"><label>Bridal / Fancy Wear</label><input type="number" min="0" data-item="Bridal / Fancy Wear" placeholder="Qty"></div>
-                    <div class="item-input"><label>Other</label><input type="number" min="0" data-item="Other" placeholder="Qty"></div>
+                    <div class="item-input"><label>Shirt</label><span class="item-price-tag">Rs. 80</span><input
+                            type="number" min="0" data-item="Shirt" data-price="80" placeholder="Qty"></div>
+                    <div class="item-input"><label>Pant</label><span class="item-price-tag">Rs. 80</span><input
+                            type="number" min="0" data-item="Pant" data-price="80" placeholder="Qty"></div>
+                    <div class="item-input"><label>Shalwar Kameez</label><span class="item-price-tag">Rs.
+                            150</span><input type="number" min="0" data-item="Shalwar Kameez" data-price="150"
+                            placeholder="Qty"></div>
+                    <div class="item-input"><label>Waistcoat</label><span class="item-price-tag">Rs. 120</span><input
+                            type="number" min="0" data-item="Waistcoat" data-price="120" placeholder="Qty"></div>
+                    <div class="item-input"><label>Blanket</label><span class="item-price-tag">Rs. 350</span><input
+                            type="number" min="0" data-item="Blanket" data-price="350" placeholder="Qty"></div>
+                    <div class="item-input"><label>Curtain</label><span class="item-price-tag">Rs. 200</span><input
+                            type="number" min="0" data-item="Curtain" data-price="200" placeholder="Qty"></div>
+                    <div class="item-input"><label>Carpet / Rug</label><span class="item-price-tag">Rs. 500</span><input
+                            type="number" min="0" data-item="Carpet / Rug" data-price="500" placeholder="Qty"></div>
+                    <div class="item-input"><label>Bed Sheet</label><span class="item-price-tag">Rs. 100</span><input
+                            type="number" min="0" data-item="Bed Sheet" data-price="100" placeholder="Qty"></div>
+                    <div class="item-input"><label>Towel</label><span class="item-price-tag">Rs. 50</span><input
+                            type="number" min="0" data-item="Towel" data-price="50" placeholder="Qty"></div>
+                    <div class="item-input"><label>Tie</label><span class="item-price-tag">Rs. 40</span><input
+                            type="number" min="0" data-item="Tie" data-price="40" placeholder="Qty"></div>
+                    <div class="item-input"><label>Coat / Jacket</label><span class="item-price-tag">Rs.
+                            250</span><input type="number" min="0" data-item="Coat / Jacket" data-price="250"
+                            placeholder="Qty"></div>
+                    <div class="item-input"><label>Sweater</label><span class="item-price-tag">Rs. 150</span><input
+                            type="number" min="0" data-item="Sweater" data-price="150" placeholder="Qty"></div>
+                    <div class="item-input"><label>Bridal Wear</label><span class="item-price-tag">Rs. 800+</span><input
+                            type="number" min="0" data-item="Bridal Wear" data-price="800" placeholder="Qty"></div>
+                    <div class="item-input"><label>Stain Removal</label><span class="item-price-tag">Rs.
+                            100</span><input type="number" min="0" data-item="Stain Removal" data-price="100"
+                            placeholder="Qty"></div>
                 </div>
 
                 <div class="form-actions" style="text-align: center; margin-top: 30px;">
@@ -244,23 +313,36 @@
             <div id="printArea">
                 <div class="receipt-content">
                     <div class="receipt-header">
-                        <h2 style="font-size:24px; margin-bottom: 5px; font-weight:800; letter-spacing:1px; line-height: 1;"><span class="pink" style="color:#ff007f;">Sparkle</span><span class="green" style="color:#00b359;">Clean</span></h2>
+                        <h2
+                            style="font-size:24px; margin-bottom: 5px; font-weight:800; letter-spacing:1px; line-height: 1;">
+                            <span class="pink" style="color:#ff007f;">Sparkle</span><span class="green"
+                                style="color:#00b359;">Clean</span>
+                        </h2>
                         <p style="margin:4px 0; font-size:12px; color:#666;">123 Main Blvd, Gulberg III, Lahore</p>
                         <p style="margin:4px 0; font-size:12px; color:#666;">Phone: +92 300 1234567</p>
                         <div class="receipt-divider" style="border-bottom: 2px dashed #000; margin: 15px 0;"></div>
-                        <h3 class="receipt-title" style="margin-bottom:15px; font-size: 16px; letter-spacing: 2px;">ORDER SLIP</h3>
+                        <h3 class="receipt-title" style="margin-bottom:15px; font-size: 16px; letter-spacing: 2px;">
+                            ORDER SLIP</h3>
                     </div>
                     <div class="receipt-info" style="margin-bottom: 20px; font-size: 14px;">
                         <p style="margin: 5px 0;"><strong>Name:</strong> <span id="rName"></span></p>
                         <p style="margin: 5px 0;"><strong>Phone:</strong> <span id="rPhone"></span></p>
-                        <p style="margin: 5px 0;"><strong>Date:</strong> <span id="rDate"></span></p>
+                        <p style="margin: 5px 0;"><strong>Order Date:</strong> <span id="rDate"></span></p>
+                        <p style="margin: 5px 0;"><strong>Return Date:</strong> <span id="rReturnDate"></span></p>
                         <p style="margin: 5px 0;"><strong>Order No:</strong> #<span id="rOrderNo"></span></p>
                     </div>
-                    <table class="receipt-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px;">
+                    <table class="receipt-table"
+                        style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px;">
                         <thead>
                             <tr>
-                                <th style="text-align: left; padding-bottom: 10px; border-bottom: 1px solid #000;">Item Description</th>
-                                <th style="text-align: right; padding-bottom: 10px; border-bottom: 1px solid #000;">Qty</th>
+                                <th style="text-align: left; padding-bottom: 10px; border-bottom: 1px solid #000;">Item
+                                </th>
+                                <th style="text-align: right; padding-bottom: 10px; border-bottom: 1px solid #000;">Qty
+                                </th>
+                                <th style="text-align: right; padding-bottom: 10px; border-bottom: 1px solid #000;">
+                                    Price</th>
+                                <th style="text-align: right; padding-bottom: 10px; border-bottom: 1px solid #000;">
+                                    Total</th>
                             </tr>
                         </thead>
                         <tbody id="rItemsList">
@@ -268,8 +350,19 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th style="text-align: right; padding-right:15px; border-top: 1px dashed #000; padding-top: 10px;">Total Items:</th>
-                                <th id="rTotalQty" style="text-align: right; border-top: 1px dashed #000; padding-top: 10px;">0</th>
+                                <th colspan="3"
+                                    style="text-align: right; border-top: 1px dashed #000; padding-top: 10px;">Total
+                                    Items:</th>
+                                <th id="rTotalQty"
+                                    style="text-align: right; border-top: 1px dashed #000; padding-top: 10px;">0</th>
+                            </tr>
+                            <tr class="receipt-total-row">
+                                <th colspan="3"
+                                    style="text-align: right; border-top: 1px solid #000; padding-top: 5px;">Grand
+                                    Total:</th>
+                                <th id="rGrandTotal"
+                                    style="text-align: right; border-top: 1px solid #000; padding-top: 5px; color: #ff007f;">
+                                    Rs. 0</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -280,8 +373,11 @@
                 </div>
             </div>
             <div class="receipt-actions">
-                <button id="btnPrint" class="btn btn-secondary" style="flex:1; font-size:14px; padding:10px;"><i class="fas fa-print"></i> Print</button>
-                <button id="btnWhatsapp" class="btn btn-primary" style="flex:1; background:#25D366; border-color:#25D366; font-size:14px; padding:10px;"><i class="fab fa-whatsapp"></i> Send</button>
+                <button id="btnPrint" class="btn btn-secondary" style="flex:1; font-size:14px; padding:10px;"><i
+                        class="fas fa-print"></i> Print</button>
+                <button id="btnWhatsapp" class="btn btn-primary"
+                    style="flex:1; background:#25D366; border-color:#25D366; font-size:14px; padding:10px;"><i
+                        class="fab fa-whatsapp"></i> Send</button>
             </div>
         </div>
     </div>

@@ -100,6 +100,7 @@ if (slipForm) {
         const name = document.getElementById('customerName').value;
         const phone = document.getElementById('customerPhone').value;
         const date = document.getElementById('orderDate').value;
+        const returnDate = document.getElementById('returnDate').value;
 
         // Generate Random Order No
         const orderNo = Math.floor(100000 + Math.random() * 900000);
@@ -107,21 +108,28 @@ if (slipForm) {
         // Gather Items
         const itemInputs = document.querySelectorAll('.item-input input');
         let totalItems = 0;
+        let grandTotal = 0;
         let itemsHtml = '';
-        let whatsappText = `*Sparkle Clean - Order Slip*\nOrder No: INV-${orderNo}\nName: ${name}\nPhone: ${phone}\nDate: ${date}\n\n*Items:*\n`;
+        let whatsappText = `*Sparkle Clean - Order Slip*\nOrder No: INV-${orderNo}\nName: ${name}\nPhone: ${phone}\nOrder Date: ${date}\nReturn Date: ${returnDate}\n\n*Items:*\n`;
 
         itemInputs.forEach(input => {
             const qty = parseInt(input.value);
             if (qty > 0) {
                 const itemName = input.getAttribute('data-item');
+                const price = parseInt(input.getAttribute('data-price')) || 0;
+                const total = qty * price;
+
                 itemsHtml += `
                     <tr>
                         <td style="padding: 5px 0; border-bottom: 1px dashed #eee;">${itemName}</td>
                         <td style="text-align: right; padding: 5px 0; border-bottom: 1px dashed #eee;">${qty}</td>
+                        <td style="text-align: right; padding: 5px 0; border-bottom: 1px dashed #eee;">Rs. ${price}</td>
+                        <td style="text-align: right; padding: 5px 0; border-bottom: 1px dashed #eee;">Rs. ${total}</td>
                     </tr>
                 `;
                 totalItems += qty;
-                whatsappText += `- ${itemName}: ${qty}\n`;
+                grandTotal += total;
+                whatsappText += `- ${itemName}: ${qty} x ${price} = Rs. ${total}\n`;
             }
         });
 
@@ -130,15 +138,18 @@ if (slipForm) {
             return;
         }
 
-        whatsappText += `\n*Total Items:* ${totalItems}\n\nThank you for choosing Sparkle Clean!`;
+        whatsappText += `\n*Total Items:* ${totalItems}`;
+        whatsappText += `\n*Grand Total: Rs. ${grandTotal}*\n\nThank you for choosing Sparkle Clean!`;
 
         // Populate Receipt
         document.getElementById('rName').textContent = name;
         document.getElementById('rPhone').textContent = phone;
         document.getElementById('rDate').textContent = date;
+        document.getElementById('rReturnDate').textContent = returnDate;
         document.getElementById('rOrderNo').textContent = `${orderNo}`;
         document.getElementById('rItemsList').innerHTML = itemsHtml;
         document.getElementById('rTotalQty').textContent = totalItems;
+        document.getElementById('rGrandTotal').textContent = `Rs. ${grandTotal}`;
 
         // Show Modal
         receiptModal.classList.add('active');
@@ -148,8 +159,8 @@ if (slipForm) {
         if (waPhone.startsWith('03')) {
             waPhone = '92' + waPhone.substring(1);
         }
-        
-        btnWhatsapp.onclick = function() {
+
+        btnWhatsapp.onclick = function () {
             const encodedText = encodeURIComponent(whatsappText);
             window.open(`https://wa.me/${waPhone}?text=${encodedText}`, '_blank');
         };
